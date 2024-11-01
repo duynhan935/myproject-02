@@ -1,0 +1,124 @@
+* {
+    box-sizing: border-box;
+}
+
+:root {
+    --header-bg: #fff;
+}
+
+html,
+body {
+    scroll-behavior: smooth;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-size: 1.6rem;
+    font-family: "Poppins", sans-serif;
+}
+
+/* Common */
+
+.container {
+    width: 1140px;
+    max-width: calc(100% - 48px);
+    margin-left: auto;
+    margin-right: auto;
+}
+
+a {
+    text-decoration: none;
+}
+
+input,
+textarea,
+select,
+button {
+    font-family: inherit;
+    font-size: inherit;
+}
+
+.btn {
+    width: 173px;
+    height: 57px;
+    border-radius: 40px;
+    border: 1.5px solid #143c3c;
+    background: var(--Primary-color-black-green, #143c3c);
+    color: var(--text-color-white, #fff);
+    text-align: center;
+    font-family: "Public Sans";
+    font-size: 1.8rem;
+    font-weight: 500;
+    line-height: 1.55;
+}
+
+/* Header */
+
+.header {
+    min-height: 100vh;
+    background: var(--header-bg);
+    padding-top: 28px;
+}
+
+.nav {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.nav::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 0.1rem;
+    background: linear-gradient(90deg, #fff 0%, #dddcdc 51.09%, rgba(212, 212, 212, 0) 99.68%);
+    bottom: -8px;
+}
+
+/* Logo */
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+/* Navbar */
+.header__navbar {
+    margin-left: auto;
+    margin-right: 67px;
+}
+
+.navbar__list {
+    display: flex;
+}
+
+.nav__link {
+    color: var(--text-color-black-gray, #575d5e);
+    font-family: "Public Sans";
+    font-size: 1.8rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 1.55;
+    padding: 4px 19px;
+}
+
+.nav__link:hover,
+.nav__link--active {
+    color: var(--Primary-color-black, #152427);
+}
+
+
+.nav__link--active::after {
+    content: "";
+    display: inline-block;
+    width: 16px;
+    height: 2px;
+    background: var(--Primary-color-black-green, #143c3c);
+    position: relative;
+    top: 30px;
+    right: 48px;
+}
